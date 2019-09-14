@@ -90,7 +90,7 @@ public class BookDao {
 	}
 	 public void alterDropColumn(String Col) {
 		try {
-			String sql="alter table employees drop "+Col;
+			String sql="alter table books drop "+Col;
 			PreparedStatement p=connection.prepareStatement(sql);
 			
 			System.out.println(p.executeUpdate());
@@ -103,7 +103,7 @@ public class BookDao {
 	 public void truncate() {
 		 PreparedStatement p;
 		try {
-			p = connection.prepareStatement("truncate employees");
+			p = connection.prepareStatement("truncate books");
 			p.executeQuery();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

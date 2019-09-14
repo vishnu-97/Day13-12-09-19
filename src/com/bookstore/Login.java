@@ -54,7 +54,6 @@ public class Login extends Books {
 			}else{
 				
 				String sql="SELECT name FROM USERS where userid=? AND password=?";
-				System.out.println(connection);
 				PreparedStatement ps=connection.
 						prepareStatement(sql);
 				ps.setString(1,userid);
